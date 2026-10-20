@@ -1,0 +1,342 @@
+{
+ "description": "Duas tool calls paralelas de uma tool in-process (codemode:false) suspensas e resolvidas; a mesma sessao continua e fecha com stop",
+ "recordedWith": {
+  "opencode": "2.1.1",
+  "model": "opencode/minimax-m3.1-flash-free",
+  "agent": "build"
+ },
+ "events": [
+  {
+   "type": "session.created",
+   "data": {
+    "sessionID": "ses_ea6139972ffe5FUI8fo97KA2Lr",
+    "projectID": "global",
+    "location": {
+     "directory": "/private/tmp/ocb-lab"
+    },
+    "subpath": "",
+    "slug": "misty-island",
+    "title": "[lab] tool-suspend",
+    "agent": "build",
+    "model": {
+     "id": "minimax-m3.1-flash-free",
+     "providerID": "opencode"
+    },
+    "version": "2.1.1"
+   }
+  },
+  {
+   "type": "session.inbox.enqueued",
+   "data": {
+    "sessionID": "ses_ea6139972ffe5FUI8fo97KA2Lr",
+    "inboxID": "msg_159ec66b9001XkVhTS9ACCbHyg",
+    "item": {
+     "type": "user",
+     "payload": {
+      "text": "Chame a tool br_fx_weather para Paris e para Tokyo, as duas chamadas em paralelo na mesma resposta. Depois resuma o clima das duas cidades em uma frase."
+     },
+     "delivery": "steer"
+    }
+   }
+  },
+  {
+   "type": "session.execution.started",
+   "data": {
+    "sessionID": "ses_ea6139972ffe5FUI8fo97KA2Lr"
+   }
+  },
+  {
+   "type": "session.instructions.updated",
+   "data": {
+    "sessionID": "ses_ea6139972ffe5FUI8fo97KA2Lr",
+    "delta": {
+     "core/codemode": "bc0d32b1dabee5f191e1ca0ca6fe535b60e7fc941c4f8acf29cb623156d2e827",
+     "core/mcp-guidance": "441276bab2c02b4b120ae7049f9b24c8b6903546b1154f3ad79f4f4d5aafd7d2",
+     "core/skill-guidance": "7ca92bdb386d26ab915c6a04c27bc73534fca3a332a54777bfa57363d360f1ba",
+     "core/instructions": "7814dcc37d4a6ed0483d087023d705ffb95c0990e12047c0da46ed29af3fb397",
+     "core/date": "ca7509e2ab26589ce8a6dc0b35cc4ceee89848e9dae352e97c68a3bac01cc63c",
+     "core/environment": "2f9b1afa5325ab08c0c7fcda378cf7ee94e28725e729ce36d209f1e63d32a191"
+    }
+   }
+  },
+  {
+   "type": "session.inbox.delivered",
+   "data": {
+    "sessionID": "ses_ea6139972ffe5FUI8fo97KA2Lr",
+    "inboxID": "msg_159ec66b9001XkVhTS9ACCbHyg"
+   }
+  },
+  {
+   "type": "session.step.started",
+   "data": {
+    "sessionID": "ses_ea6139972ffe5FUI8fo97KA2Lr",
+    "assistantMessageID": "msg_159ec66c000186XRjwDaG6UU5q",
+    "agent": "build",
+    "model": {
+     "id": "minimax-m3.1-flash-free",
+     "providerID": "opencode",
+     "variant": "default"
+    },
+    "snapshot": "292e571c3dfe0a0b1d091ebee037860747fe7c9c",
+    "started": 1792510027461
+   }
+  },
+  {
+   "type": "session.text.started",
+   "data": {
+    "sessionID": "ses_ea6139972ffe5FUI8fo97KA2Lr",
+    "assistantMessageID": "msg_159ec66c000186XRjwDaG6UU5q",
+    "ordinal": 0
+   }
+  },
+  {
+   "type": "session.text.delta",
+   "data": {
+    "sessionID": "ses_ea6139972ffe5FUI8fo97KA2Lr",
+    "assistantMessageID": "msg_159ec66c000186XRjwDaG6UU5q",
+    "ordinal": 0,
+    "delta": "I'll call the weather tool for both cities in parallel."
+   }
+  },
+  {
+   "type": "session.tool.input.started",
+   "data": {
+    "sessionID": "ses_ea6139972ffe5FUI8fo97KA2Lr",
+    "assistantMessageID": "msg_159ec66c000186XRjwDaG6UU5q",
+    "id": "call_2b4a5c82789445849bb8d427",
+    "name": "br_fx_weather"
+   }
+  },
+  {
+   "type": "session.tool.input.started",
+   "data": {
+    "sessionID": "ses_ea6139972ffe5FUI8fo97KA2Lr",
+    "assistantMessageID": "msg_159ec66c000186XRjwDaG6UU5q",
+    "id": "call_4b8826ceac4f4f20a1d8e534",
+    "name": "br_fx_weather"
+   }
+  },
+  {
+   "type": "session.tool.input.ended",
+   "data": {
+    "sessionID": "ses_ea6139972ffe5FUI8fo97KA2Lr",
+    "assistantMessageID": "msg_159ec66c000186XRjwDaG6UU5q",
+    "id": "call_2b4a5c82789445849bb8d427",
+    "text": "{\"city\":\"Paris\"}"
+   }
+  },
+  {
+   "type": "session.tool.called",
+   "data": {
+    "sessionID": "ses_ea6139972ffe5FUI8fo97KA2Lr",
+    "assistantMessageID": "msg_159ec66c000186XRjwDaG6UU5q",
+    "id": "call_2b4a5c82789445849bb8d427",
+    "input": {
+     "city": "Paris"
+    },
+    "executed": false
+   }
+  },
+  {
+   "type": "session.tool.input.ended",
+   "data": {
+    "sessionID": "ses_ea6139972ffe5FUI8fo97KA2Lr",
+    "assistantMessageID": "msg_159ec66c000186XRjwDaG6UU5q",
+    "id": "call_4b8826ceac4f4f20a1d8e534",
+    "text": "{\"city\":\"Tokyo\"}"
+   }
+  },
+  {
+   "type": "session.tool.called",
+   "data": {
+    "sessionID": "ses_ea6139972ffe5FUI8fo97KA2Lr",
+    "assistantMessageID": "msg_159ec66c000186XRjwDaG6UU5q",
+    "id": "call_4b8826ceac4f4f20a1d8e534",
+    "input": {
+     "city": "Tokyo"
+    },
+    "executed": false
+   }
+  },
+  {
+   "type": "session.text.ended",
+   "data": {
+    "sessionID": "ses_ea6139972ffe5FUI8fo97KA2Lr",
+    "assistantMessageID": "msg_159ec66c000186XRjwDaG6UU5q",
+    "ordinal": 0,
+    "text": "I'll call the weather tool for both cities in parallel."
+   }
+  },
+  {
+   "type": "session.step.streamed",
+   "data": {
+    "sessionID": "ses_ea6139972ffe5FUI8fo97KA2Lr",
+    "assistantMessageID": "msg_159ec66c000186XRjwDaG6UU5q"
+   }
+  },
+  {
+   "type": "session.tool.success",
+   "data": {
+    "sessionID": "ses_ea6139972ffe5FUI8fo97KA2Lr",
+    "assistantMessageID": "msg_159ec66c000186XRjwDaG6UU5q",
+    "id": "call_2b4a5c82789445849bb8d427",
+    "content": [
+     {
+      "type": "text",
+      "text": "Clima em Paris: 22C, ensolarado"
+     }
+    ],
+    "metadata": {
+     "truncated": false
+    },
+    "executed": false
+   }
+  },
+  {
+   "type": "session.tool.success",
+   "data": {
+    "sessionID": "ses_ea6139972ffe5FUI8fo97KA2Lr",
+    "assistantMessageID": "msg_159ec66c000186XRjwDaG6UU5q",
+    "id": "call_4b8826ceac4f4f20a1d8e534",
+    "content": [
+     {
+      "type": "text",
+      "text": "Clima em Tokyo: 22C, ensolarado"
+     }
+    ],
+    "metadata": {
+     "truncated": false
+    },
+    "executed": false
+   }
+  },
+  {
+   "type": "session.step.ended",
+   "data": {
+    "sessionID": "ses_ea6139972ffe5FUI8fo97KA2Lr",
+    "assistantMessageID": "msg_159ec66c000186XRjwDaG6UU5q",
+    "finish": "tool-calls",
+    "rawFinish": "tool_calls",
+    "cost": 0,
+    "tokens": {
+     "input": 8376,
+     "output": 66,
+     "reasoning": 0,
+     "cache": {
+      "read": 6656,
+      "write": 0
+     }
+    },
+    "snapshot": "292e571c3dfe0a0b1d091ebee037860747fe7c9c",
+    "files": []
+   }
+  },
+  {
+   "type": "session.usage.updated",
+   "data": {
+    "sessionID": "ses_ea6139972ffe5FUI8fo97KA2Lr",
+    "cost": 0,
+    "tokens": {
+     "input": 8376,
+     "output": 66,
+     "reasoning": 0,
+     "cache": {
+      "read": 6656,
+      "write": 0
+     }
+    }
+   }
+  },
+  {
+   "type": "session.step.started",
+   "data": {
+    "sessionID": "ses_ea6139972ffe5FUI8fo97KA2Lr",
+    "assistantMessageID": "msg_159ec75c8001zW2ALDcrhzjCEs",
+    "agent": "build",
+    "model": {
+     "id": "minimax-m3.1-flash-free",
+     "providerID": "opencode",
+     "variant": "default"
+    },
+    "snapshot": "292e571c3dfe0a0b1d091ebee037860747fe7c9c",
+    "started": 1792510031308
+   }
+  },
+  {
+   "type": "session.text.started",
+   "data": {
+    "sessionID": "ses_ea6139972ffe5FUI8fo97KA2Lr",
+    "assistantMessageID": "msg_159ec75c8001zW2ALDcrhzjCEs",
+    "ordinal": 0
+   }
+  },
+  {
+   "type": "session.text.delta",
+   "data": {
+    "sessionID": "ses_ea6139972ffe5FUI8fo97KA2Lr",
+    "assistantMessageID": "msg_159ec75c8001zW2ALDcrhzjCEs",
+    "ordinal": 0,
+    "delta": "Resumo: Paris e Tokyo estão ambas com clima de 22°C e ensolarado."
+   }
+  },
+  {
+   "type": "session.text.ended",
+   "data": {
+    "sessionID": "ses_ea6139972ffe5FUI8fo97KA2Lr",
+    "assistantMessageID": "msg_159ec75c8001zW2ALDcrhzjCEs",
+    "ordinal": 0,
+    "text": "Resumo: Paris e Tokyo estão ambas com clima de 22°C e ensolarado."
+   }
+  },
+  {
+   "type": "session.step.streamed",
+   "data": {
+    "sessionID": "ses_ea6139972ffe5FUI8fo97KA2Lr",
+    "assistantMessageID": "msg_159ec75c8001zW2ALDcrhzjCEs"
+   }
+  },
+  {
+   "type": "session.step.ended",
+   "data": {
+    "sessionID": "ses_ea6139972ffe5FUI8fo97KA2Lr",
+    "assistantMessageID": "msg_159ec75c8001zW2ALDcrhzjCEs",
+    "finish": "stop",
+    "rawFinish": "stop",
+    "cost": 0,
+    "tokens": {
+     "input": 551,
+     "output": 20,
+     "reasoning": 0,
+     "cache": {
+      "read": 14592,
+      "write": 0
+     }
+    },
+    "snapshot": "292e571c3dfe0a0b1d091ebee037860747fe7c9c",
+    "files": []
+   }
+  },
+  {
+   "type": "session.usage.updated",
+   "data": {
+    "sessionID": "ses_ea6139972ffe5FUI8fo97KA2Lr",
+    "cost": 0,
+    "tokens": {
+     "input": 8927,
+     "output": 86,
+     "reasoning": 0,
+     "cache": {
+      "read": 21248,
+      "write": 0
+     }
+    }
+   }
+  },
+  {
+   "type": "session.execution.succeeded",
+   "data": {
+    "sessionID": "ses_ea6139972ffe5FUI8fo97KA2Lr"
+   }
+  }
+ ]
+}

@@ -1,0 +1,175 @@
+{
+ "description": "Turn de texto simples: execution.started -> step -> text.delta -> step.ended(stop) -> execution.succeeded",
+ "recordedWith": {
+  "opencode": "2.1.1",
+  "model": "opencode/minimax-m3.1-flash-free",
+  "agent": "build"
+ },
+ "events": [
+  {
+   "type": "session.created",
+   "data": {
+    "sessionID": "ses_ea613a568fferg2ZuxK0aPWGxM",
+    "projectID": "global",
+    "location": {
+     "directory": "/private/tmp/ocb-lab"
+    },
+    "subpath": "",
+    "slug": "stellar-engine",
+    "title": "[lab] events",
+    "agent": "build",
+    "model": {
+     "id": "minimax-m3.1-flash-free",
+     "providerID": "opencode"
+    },
+    "version": "2.1.1"
+   }
+  },
+  {
+   "type": "session.inbox.enqueued",
+   "data": {
+    "sessionID": "ses_ea613a568fferg2ZuxK0aPWGxM",
+    "inboxID": "msg_159ec5ad9001r3Fe6dW8IIECxB",
+    "item": {
+     "type": "user",
+     "payload": {
+      "text": "Responda apenas: ola mundo"
+     },
+     "delivery": "steer"
+    }
+   }
+  },
+  {
+   "type": "project.updated",
+   "data": {
+    "id": "global",
+    "canonical": "/",
+    "vcs": "git",
+    "time": {
+     "created": 1773947180305,
+     "updated": 1791456963280,
+     "active": 1792510024411
+    },
+    "sandboxes": []
+   }
+  },
+  {
+   "type": "session.execution.started",
+   "data": {
+    "sessionID": "ses_ea613a568fferg2ZuxK0aPWGxM"
+   }
+  },
+  {
+   "type": "session.instructions.updated",
+   "data": {
+    "sessionID": "ses_ea613a568fferg2ZuxK0aPWGxM",
+    "delta": {
+     "core/codemode": "bc0d32b1dabee5f191e1ca0ca6fe535b60e7fc941c4f8acf29cb623156d2e827",
+     "core/mcp-guidance": "441276bab2c02b4b120ae7049f9b24c8b6903546b1154f3ad79f4f4d5aafd7d2",
+     "core/skill-guidance": "7ca92bdb386d26ab915c6a04c27bc73534fca3a332a54777bfa57363d360f1ba",
+     "core/instructions": "7814dcc37d4a6ed0483d087023d705ffb95c0990e12047c0da46ed29af3fb397",
+     "core/date": "ca7509e2ab26589ce8a6dc0b35cc4ceee89848e9dae352e97c68a3bac01cc63c",
+     "core/environment": "2f9b1afa5325ab08c0c7fcda378cf7ee94e28725e729ce36d209f1e63d32a191"
+    }
+   }
+  },
+  {
+   "type": "session.inbox.delivered",
+   "data": {
+    "sessionID": "ses_ea613a568fferg2ZuxK0aPWGxM",
+    "inboxID": "msg_159ec5ad9001r3Fe6dW8IIECxB"
+   }
+  },
+  {
+   "type": "session.step.started",
+   "data": {
+    "sessionID": "ses_ea613a568fferg2ZuxK0aPWGxM",
+    "assistantMessageID": "msg_159ec5ae4001HqfvDdLZrG3HcL",
+    "agent": "build",
+    "model": {
+     "id": "minimax-m3.1-flash-free",
+     "providerID": "opencode",
+     "variant": "default"
+    },
+    "snapshot": "2e72dd3afe1faf24adda261a4262e3df73bbe60c",
+    "started": 1792510024425
+   }
+  },
+  {
+   "type": "session.text.started",
+   "data": {
+    "sessionID": "ses_ea613a568fferg2ZuxK0aPWGxM",
+    "assistantMessageID": "msg_159ec5ae4001HqfvDdLZrG3HcL",
+    "ordinal": 0
+   }
+  },
+  {
+   "type": "session.text.delta",
+   "data": {
+    "sessionID": "ses_ea613a568fferg2ZuxK0aPWGxM",
+    "assistantMessageID": "msg_159ec5ae4001HqfvDdLZrG3HcL",
+    "ordinal": 0,
+    "delta": "ola mundo"
+   }
+  },
+  {
+   "type": "session.text.ended",
+   "data": {
+    "sessionID": "ses_ea613a568fferg2ZuxK0aPWGxM",
+    "assistantMessageID": "msg_159ec5ae4001HqfvDdLZrG3HcL",
+    "ordinal": 0,
+    "text": "ola mundo"
+   }
+  },
+  {
+   "type": "session.step.streamed",
+   "data": {
+    "sessionID": "ses_ea613a568fferg2ZuxK0aPWGxM",
+    "assistantMessageID": "msg_159ec5ae4001HqfvDdLZrG3HcL"
+   }
+  },
+  {
+   "type": "session.step.ended",
+   "data": {
+    "sessionID": "ses_ea613a568fferg2ZuxK0aPWGxM",
+    "assistantMessageID": "msg_159ec5ae4001HqfvDdLZrG3HcL",
+    "finish": "stop",
+    "rawFinish": "stop",
+    "cost": 0,
+    "tokens": {
+     "input": 14,
+     "output": 3,
+     "reasoning": 0,
+     "cache": {
+      "read": 15010,
+      "write": 0
+     }
+    },
+    "snapshot": "2e72dd3afe1faf24adda261a4262e3df73bbe60c",
+    "files": []
+   }
+  },
+  {
+   "type": "session.usage.updated",
+   "data": {
+    "sessionID": "ses_ea613a568fferg2ZuxK0aPWGxM",
+    "cost": 0,
+    "tokens": {
+     "input": 14,
+     "output": 3,
+     "reasoning": 0,
+     "cache": {
+      "read": 15010,
+      "write": 0
+     }
+    }
+   }
+  },
+  {
+   "type": "session.execution.succeeded",
+   "data": {
+    "sessionID": "ses_ea613a568fferg2ZuxK0aPWGxM"
+   }
+  }
+ ]
+}

@@ -1,0 +1,260 @@
+{
+ "description": "Duas tool calls paralelas suspensas e depois session.interrupt: tool.failed(aborted), step.failed, execution.interrupted",
+ "recordedWith": {
+  "opencode": "2.1.1",
+  "model": "opencode/minimax-m3.1-flash-free",
+  "agent": "build"
+ },
+ "events": [
+  {
+   "type": "session.created",
+   "data": {
+    "sessionID": "ses_ea6137cf0ffecp53JEx3S13Sha",
+    "projectID": "global",
+    "location": {
+     "directory": "/private/tmp/ocb-lab"
+    },
+    "subpath": "",
+    "slug": "quiet-pixel",
+    "title": "[lab] tool-suspend",
+    "agent": "build",
+    "model": {
+     "id": "minimax-m3.1-flash-free",
+     "providerID": "opencode"
+    },
+    "version": "2.1.1"
+   }
+  },
+  {
+   "type": "session.inbox.enqueued",
+   "data": {
+    "sessionID": "ses_ea6137cf0ffecp53JEx3S13Sha",
+    "inboxID": "msg_159ec8338001dJwK6YKeQXekEj",
+    "item": {
+     "type": "user",
+     "payload": {
+      "text": "Chame a tool br_fx_weather para Paris e para Tokyo, as duas chamadas em paralelo na mesma resposta. Depois resuma o clima das duas cidades em uma frase."
+     },
+     "delivery": "steer"
+    }
+   }
+  },
+  {
+   "type": "session.execution.started",
+   "data": {
+    "sessionID": "ses_ea6137cf0ffecp53JEx3S13Sha"
+   }
+  },
+  {
+   "type": "session.instructions.updated",
+   "data": {
+    "sessionID": "ses_ea6137cf0ffecp53JEx3S13Sha",
+    "delta": {
+     "core/codemode": "bc0d32b1dabee5f191e1ca0ca6fe535b60e7fc941c4f8acf29cb623156d2e827",
+     "core/mcp-guidance": "441276bab2c02b4b120ae7049f9b24c8b6903546b1154f3ad79f4f4d5aafd7d2",
+     "core/skill-guidance": "7ca92bdb386d26ab915c6a04c27bc73534fca3a332a54777bfa57363d360f1ba",
+     "core/instructions": "7814dcc37d4a6ed0483d087023d705ffb95c0990e12047c0da46ed29af3fb397",
+     "core/date": "ca7509e2ab26589ce8a6dc0b35cc4ceee89848e9dae352e97c68a3bac01cc63c",
+     "core/environment": "2f9b1afa5325ab08c0c7fcda378cf7ee94e28725e729ce36d209f1e63d32a191"
+    }
+   }
+  },
+  {
+   "type": "session.inbox.delivered",
+   "data": {
+    "sessionID": "ses_ea6137cf0ffecp53JEx3S13Sha",
+    "inboxID": "msg_159ec8338001dJwK6YKeQXekEj"
+   }
+  },
+  {
+   "type": "session.step.started",
+   "data": {
+    "sessionID": "ses_ea6137cf0ffecp53JEx3S13Sha",
+    "assistantMessageID": "msg_159ec83400015Z07cZ7a0A9VUq",
+    "agent": "build",
+    "model": {
+     "id": "minimax-m3.1-flash-free",
+     "providerID": "opencode",
+     "variant": "default"
+    },
+    "snapshot": "75111def60004da2c49ef64827ecbd9ed80eaa21",
+    "started": 1792510034758
+   }
+  },
+  {
+   "type": "session.text.started",
+   "data": {
+    "sessionID": "ses_ea6137cf0ffecp53JEx3S13Sha",
+    "assistantMessageID": "msg_159ec83400015Z07cZ7a0A9VUq",
+    "ordinal": 0
+   }
+  },
+  {
+   "type": "session.text.delta",
+   "data": {
+    "sessionID": "ses_ea6137cf0ffecp53JEx3S13Sha",
+    "assistantMessageID": "msg_159ec83400015Z07cZ7a0A9VUq",
+    "ordinal": 0,
+    "delta": "I'll"
+   }
+  },
+  {
+   "type": "session.text.delta",
+   "data": {
+    "sessionID": "ses_ea6137cf0ffecp53JEx3S13Sha",
+    "assistantMessageID": "msg_159ec83400015Z07cZ7a0A9VUq",
+    "ordinal": 0,
+    "delta": " call the weather tool for both cities in parallel."
+   }
+  },
+  {
+   "type": "session.tool.input.started",
+   "data": {
+    "sessionID": "ses_ea6137cf0ffecp53JEx3S13Sha",
+    "assistantMessageID": "msg_159ec83400015Z07cZ7a0A9VUq",
+    "id": "call_function_xobr0zmm8x82_1",
+    "name": "br_fx_weather"
+   }
+  },
+  {
+   "type": "session.tool.input.started",
+   "data": {
+    "sessionID": "ses_ea6137cf0ffecp53JEx3S13Sha",
+    "assistantMessageID": "msg_159ec83400015Z07cZ7a0A9VUq",
+    "id": "call_function_xobr0zmm8x82_2",
+    "name": "br_fx_weather"
+   }
+  },
+  {
+   "type": "session.tool.input.ended",
+   "data": {
+    "sessionID": "ses_ea6137cf0ffecp53JEx3S13Sha",
+    "assistantMessageID": "msg_159ec83400015Z07cZ7a0A9VUq",
+    "id": "call_function_xobr0zmm8x82_1",
+    "text": "{\"city\": \"Paris\"}"
+   }
+  },
+  {
+   "type": "session.tool.called",
+   "data": {
+    "sessionID": "ses_ea6137cf0ffecp53JEx3S13Sha",
+    "assistantMessageID": "msg_159ec83400015Z07cZ7a0A9VUq",
+    "id": "call_function_xobr0zmm8x82_1",
+    "input": {
+     "city": "Paris"
+    },
+    "executed": false
+   }
+  },
+  {
+   "type": "session.tool.input.ended",
+   "data": {
+    "sessionID": "ses_ea6137cf0ffecp53JEx3S13Sha",
+    "assistantMessageID": "msg_159ec83400015Z07cZ7a0A9VUq",
+    "id": "call_function_xobr0zmm8x82_2",
+    "text": "{\"city\": \"Tokyo\"}"
+   }
+  },
+  {
+   "type": "session.tool.called",
+   "data": {
+    "sessionID": "ses_ea6137cf0ffecp53JEx3S13Sha",
+    "assistantMessageID": "msg_159ec83400015Z07cZ7a0A9VUq",
+    "id": "call_function_xobr0zmm8x82_2",
+    "input": {
+     "city": "Tokyo"
+    },
+    "executed": false
+   }
+  },
+  {
+   "type": "session.text.ended",
+   "data": {
+    "sessionID": "ses_ea6137cf0ffecp53JEx3S13Sha",
+    "assistantMessageID": "msg_159ec83400015Z07cZ7a0A9VUq",
+    "ordinal": 0,
+    "text": "I'll call the weather tool for both cities in parallel."
+   }
+  },
+  {
+   "type": "session.step.streamed",
+   "data": {
+    "sessionID": "ses_ea6137cf0ffecp53JEx3S13Sha",
+    "assistantMessageID": "msg_159ec83400015Z07cZ7a0A9VUq"
+   }
+  },
+  {
+   "type": "session.tool.failed",
+   "data": {
+    "sessionID": "ses_ea6137cf0ffecp53JEx3S13Sha",
+    "assistantMessageID": "msg_159ec83400015Z07cZ7a0A9VUq",
+    "id": "call_function_xobr0zmm8x82_1",
+    "error": {
+     "type": "aborted",
+     "message": "Tool execution interrupted"
+    },
+    "executed": false
+   }
+  },
+  {
+   "type": "session.tool.failed",
+   "data": {
+    "sessionID": "ses_ea6137cf0ffecp53JEx3S13Sha",
+    "assistantMessageID": "msg_159ec83400015Z07cZ7a0A9VUq",
+    "id": "call_function_xobr0zmm8x82_2",
+    "error": {
+     "type": "aborted",
+     "message": "Tool execution interrupted"
+    },
+    "executed": false
+   }
+  },
+  {
+   "type": "session.step.failed",
+   "data": {
+    "sessionID": "ses_ea6137cf0ffecp53JEx3S13Sha",
+    "assistantMessageID": "msg_159ec83400015Z07cZ7a0A9VUq",
+    "error": {
+     "type": "aborted",
+     "message": "Step interrupted"
+    },
+    "rawFinish": "tool_calls",
+    "cost": 0,
+    "tokens": {
+     "input": 8012,
+     "output": 65,
+     "reasoning": 0,
+     "cache": {
+      "read": 7115,
+      "write": 0
+     }
+    },
+    "snapshot": "75111def60004da2c49ef64827ecbd9ed80eaa21",
+    "files": []
+   }
+  },
+  {
+   "type": "session.usage.updated",
+   "data": {
+    "sessionID": "ses_ea6137cf0ffecp53JEx3S13Sha",
+    "cost": 0,
+    "tokens": {
+     "input": 8012,
+     "output": 65,
+     "reasoning": 0,
+     "cache": {
+      "read": 7115,
+      "write": 0
+     }
+    }
+   }
+  },
+  {
+   "type": "session.execution.interrupted",
+   "data": {
+    "sessionID": "ses_ea6137cf0ffecp53JEx3S13Sha",
+    "reason": "user"
+   }
+  }
+ ]
+}
