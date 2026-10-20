@@ -1,4 +1,4 @@
-# OpenCode Bridge
+# opencode-as-openai
 
 Plugin do **OpenCode v2** que transforma o OpenCode em um provider **OpenAI-compatible** (`/v1/chat/completions`, `/v1/models`) para ferramentas externas como pen.dev, Cursor e SDKs da OpenAI.
 
@@ -8,7 +8,7 @@ Ao abrir o OpenCode em um projeto que declara o plugin, ele sobe um servidor HTT
 cliente (pen.dev, Cursor, SDK OpenAI)
       │  POST /v1/chat/completions  (JSON ou SSE)
       ▼
- opencode-bridge  (plugin, dentro do processo do OpenCode)
+ opencode-as-openai  (plugin, dentro do processo do OpenCode)
       │  ctx.session / ctx.event / ctx.tool / hooks
       ▼
  OpenCode v2  →  provider/modelo configurado
@@ -16,7 +16,7 @@ cliente (pen.dev, Cursor, SDK OpenAI)
 
 ## Instalação
 
-Requer OpenCode **v2** (testado com 2.1.1). Ainda não está publicado no npm; aponte para o diretório do repositório (precisa de `bun install` antes).
+Requer OpenCode **v2** (testado com 2.1.1).
 
 **No `opencode.json` do projeto (ou global, `~/.config/opencode/opencode.json`):**
 
@@ -25,19 +25,19 @@ Requer OpenCode **v2** (testado com 2.1.1). Ainda não está publicado no npm; a
   "$schema": "https://opencode.ai/config.json",
   "plugins": [
     {
-      "package": "/caminho/para/opencode-bridge",
+      "package": "opencode-as-openai",
       "options": { "port": 4010 }
     }
   ]
 }
 ```
 
-Sem opções basta a string: `"plugins": ["/caminho/para/opencode-bridge"]`. O diretório precisa ter `index.ts` na raiz (já tem).
+Sem opções basta a string: `"plugins": ["opencode-as-openai"]`.
 
-Alternativa sem editar a config: um arquivo `.opencode/plugins/bridge.ts` no projeto com
+**Desenvolvimento local:** clone o repositório, rode `bun install` e aponte para o diretório (que tem `index.ts` na raiz) em vez do nome do pacote: `"plugins": ["/caminho/para/opencode-as-openai"]`. Alternativa sem editar a config: um arquivo `.opencode/plugins/bridge.ts` no projeto com
 
 ```ts
-export { default } from "/caminho/para/opencode-bridge/index.ts"
+export { default } from "/caminho/para/opencode-as-openai/index.ts"
 ```
 
 Abra o OpenCode no projeto e confira: `curl http://127.0.0.1:4010/health`.
